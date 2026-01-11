@@ -16,7 +16,7 @@ st.markdown("""
 
     /* Жёстко задаем цвет для ВСЕГО текста, чтобы Dark Mode его не инвертировал */
     .stApp, .stMarkdown, p, li, span, div {
-        color: #FFFFFF !important; /* Почти черный */
+        color: #1f1f1f !important; /* Почти черный */
     }
 
     h1, h2, h3 {
