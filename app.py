@@ -23,6 +23,16 @@ st.markdown("""
         color: #D63384 !important; /* Наш фирменный розовый */
         font-family: 'Inter', sans-serif;
     }
+    /* КНОПКИ ТЕСТА: Белый текст (!) и розовый фон */
+    .stButton>button {
+        background-color: #D63384 !important;
+        color: #FFFFFF !important; /* Жёстко белый текст */
+        border-radius: 20px !important;
+        border: none !important;
+        padding: 10px 25px !important;
+        font-weight: bold !important;
+        width: 100% !important;
+    }
 
     /* Оставляем кнопку яркой */
     .stButton>button {
