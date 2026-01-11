@@ -181,18 +181,50 @@ elif st.session_state.step == 'result':
         </div>
     """, unsafe_allow_html=True)
     
-    # Финальный блок (общий для всех)
-    st.markdown("""
+ # Финальный блок (общий для всех)
+    st.markdown(f"""
+        <style>
+        .main-cta {{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #D63384; /* Яркий малиновый */
+            color: white !important;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
+            transition: all 0.3s ease;
+            text-align: center;
+            margin: 20px 0;
+            border: none;
+        }}
+        .main-cta:hover {{
+            background-color: #b0266a;
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(214, 51, 132, 0.6);
+            color: white !important;
+        }}
+        </style>
+        
         <div class="final-text">
             Цифры не врут. Ты видишь, сколько денег остается на столе у других, а не в твоем кошельке. 🥺<br><br>
             2026 год может стать таким же... или стать годом твоего триумфа. Учитывая, что 28 поток "Магии Мастера" — финальный...<br><br>
             <b>Оставляй заявку на курс или консультацию, и мы поможем тебе определиться с вектором роста.</b>
         </div>
+        
+        <a href="https://ustinova-school.online/28-potok" class="main-cta" target="_blank">
+            ОСТАВИТЬ ЗАЯВКУ 🚀
+        </a>
     """, unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
-    st.link_button("ОСТАВИТЬ ЗАЯВКУ 🚀", "https://ustinova-school.online/28-potok")
     
+    # Кнопку "Заново" оставим стандартной, чтобы она не спорила с основным призывом
     if st.button("Пройти заново 🔄"):
         restart()
         st.rerun()
