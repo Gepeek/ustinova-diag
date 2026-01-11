@@ -7,46 +7,41 @@ st.set_page_config(page_title="Диагностика Ustinova School", page_ico
 # Кастомный CSS для стиля Ustinova School
 st.markdown("""
     <style>
-    /* Отключаем стандартные ссылки-якоря у заголовков */
+    /* Отключаем стандартные ссылки-якоря */
     .viewerBadge_link__1S137 { display: none; }
-    button[data-baseweb="tab"] { font-size: 20px; }
     
     .stApp {
-        background-color: #FFFFFF;
+        background-color: #FFFFFF !important;
     }
+
+    /* Жёстко задаем цвет для ВСЕГО текста, чтобы Dark Mode его не инвертировал */
+    .stApp, .stMarkdown, p, li, span, div {
+        color: #1f1f1f !important; /* Почти черный */
+    }
+
     h1, h2, h3 {
-        color: #D63384 !important;
+        color: #D63384 !important; /* Наш фирменный розовый */
         font-family: 'Inter', sans-serif;
     }
+
+    /* Оставляем кнопку яркой */
     .stButton>button {
-        background-color: #D63384;
-        color: white;
+        background-color: #D63384 !important;
+        color: white !important;
         border-radius: 20px;
-        border: none;
-        padding: 10px 25px;
-        font-weight: bold;
-        transition: 0.3s;
-        width: 100%;
-        font-size: 16px;
     }
-    .stButton>button:hover {
-        background-color: #b0266a;
-        color: white;
-    }
-    .stProgress > div > div > div > div {
-        background-color: #D63384;
-    }
+    
     .result-card {
         padding: 25px;
         border: 2px solid #D63384;
         border-radius: 15px;
-        background-color: #FFF0F6;
+        background-color: #FFF0F6 !important;
         margin-bottom: 20px;
     }
-    .final-text {
-        font-size: 18px;
-        line-height: 1.6;
-        margin-top: 20px;
+
+    /* Фикс для кнопки в Markdown (твоя яркая кнопка) */
+    .main-cta {
+        color: white !important; /* Всегда белый текст на кнопке */
     }
     </style>
     """, unsafe_allow_html=True)
